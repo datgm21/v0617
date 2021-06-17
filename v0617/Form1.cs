@@ -51,6 +51,15 @@ namespace v0617
 
             score--;
             label2.Text = $"Score {score}";
+
+            if (    (fpos.X >= label1.Left)
+                &&  (fpos.X < label1.Right)
+                &&  (fpos.Y >= label1.Top)
+                &&  (fpos.Y < label1.Bottom)
+                )
+            {
+                timer1.Enabled = false;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
